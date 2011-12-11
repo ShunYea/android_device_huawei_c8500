@@ -87,3 +87,17 @@ PRODUCT_BRAND := huawei
 PRODUCT_MANUFACTURER := huawei
 PRODUCT_LOCALES := zh_CN zh_TW en_US
 PRODUCT_DEFAULT_REGION := CN
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.clientidbase=android-huawei-cn \
+    ro.cdma.home.operator.numeric=46003 \
+    ro.cdma.home.operator.alpha=中国电信 \
+    ro.telephony.default_network=4 \
+    ro.config.cdma_subscription=0 \
+    ril.subscription.types=RUIM,NV \
+    ro.cdma.voicemail.number=mine \
+    ro.setupwizard.enable_bypass=1 \
+    keyguard.no_require_sim=
+
+# add the addons
+$(call inherit-product-if-exists, addons/addons.mk)
