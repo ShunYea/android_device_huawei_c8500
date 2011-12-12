@@ -95,4 +95,8 @@
 
     <!-- The duration (in milliseconds) of a long animation. -->
     <integer name="config_longAnimTime">300</integer>
+
+    <!-- If this is true, the screen will fade off. -->
+    <bool name="config_animateScreenLights">false</bool>
+
 </resources>
