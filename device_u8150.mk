@@ -70,7 +70,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += device/huawei/u8150/prebuilt/kernel:kernel
 
-$(call inherit-product-if-exists, vendor/huawei/u8150/u8150-vendor.mk)
+$(call inherit-product-if-exists, vendor/huawei/c8500/c8500-vendor.mk)
 
 $(call inherit-product, build/target/product/full_base.mk)
 
