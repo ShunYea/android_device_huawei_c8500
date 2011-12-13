@@ -14,7 +14,7 @@
 #
 
 # inherit from the proprietary version
--include vendor/huawei/u8150/BoardConfigVendor.mk
+-include vendor/huawei/c8500/BoardConfigVendor.mk
 
 # ARMv6-compatible processor rev 2 (v6l)
 # CPU
