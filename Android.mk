@@ -14,6 +14,6 @@
 # limitations under the License.
 #
 
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),u8150)
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),c8500)
 include $(call all-named-subdir-makefiles, recovery libaudio libcopybit libril liblights)
 endif

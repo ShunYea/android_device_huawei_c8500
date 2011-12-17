@@ -24,8 +24,8 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_ABI := armeabi-v6j
 
 # Target properties
-TARGET_BOOTLOADER_BOARD_NAME := u8150
-TARGET_OTA_ASSERT_DEVICE := u8150,ideos,U8150
+TARGET_BOOTLOADER_BOARD_NAME := c8500
+TARGET_OTA_ASSERT_DEVICE := c8500,C8500
 
 # Target information
 TARGET_NO_BOOTLOADER := true
@@ -45,13 +45,13 @@ BOARD_USES_QCOM_LIBRPC := true
 # GPS
 BOARD_USES_QCOM_GPS := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 1240
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := u8150
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := c8500
 
 # Browser
 JS_ENGINE := v8
 
 # USB mass storage
-BOARD_CUSTOM_USB_CONTROLLER := ../../device/huawei/u8150/UsbController.cpp
+BOARD_CUSTOM_USB_CONTROLLER := ../../device/huawei/c8500/UsbController.cpp
 BOARD_USE_USB_MASS_STORAGE_SWITCH := true
 BOARD_UMS_LUNFILE := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
 
@@ -63,7 +63,7 @@ BOARD_VENDOR_USE_AKMD := akm8973
 TARGET_PROVIDES_LIBLIGHTS := true
 
 # Recovery
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/huawei/u8150/recovery/recovery_ui.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/huawei/c8500/recovery/recovery_ui.c
 BOARD_LDPI_RECOVERY := true
 
 # Audio
@@ -79,7 +79,7 @@ TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
 BOARD_AVOID_DRAW_TEXTURE_EXTENSION := true
 TARGET_SF_NEEDS_REAL_DIMENSIONS := true
 BOARD_NO_RGBX_8888 := true
-BOARD_EGL_CFG := device/huawei/u8150/prebuilt/lib/egl/egl.cfg
+BOARD_EGL_CFG := device/huawei/c8500/prebuilt/lib/egl/egl.cfg
 BOARD_HAS_LIMITED_EGL := true
 TARGET_USES_16BPPSURFACE_FOR_OPAQUE := true
 
@@ -93,9 +93,9 @@ WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/bcm4319.ko"
 WPA_SUPPLICANT_VERSION := VER_0_5_X
 
 # Kernel
-TARGET_PREBUILT_RECOVERY_KERNEL := device/huawei/u8150/prebuilt/recovery_kernel
+TARGET_PREBUILT_RECOVERY_KERNEL := device/huawei/c8500/prebuilt/recovery_kernel
 BOARD_KERNEL_BASE := 0x00200000
-BOARD_KERNEL_CMDLINE := mem=211M console=ttyMSM2,115200n8 androidboot.hardware=u8150
+BOARD_KERNEL_CMDLINE := mem=211M console=ttyMSM2,115200n8 androidboot.hardware=c8500
 BOARD_KERNEL_PAGESIZE := 4096
 
 # # cat /proc/mtd

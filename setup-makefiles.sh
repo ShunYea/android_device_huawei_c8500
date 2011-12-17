@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE=u8150
+DEVICE=c8500
 
 mkdir -p ../../../vendor/huawei/$DEVICE
 
