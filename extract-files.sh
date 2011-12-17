@@ -6,7 +6,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#      http://www.apache.org/licenses/LICENSu8150E-2.0
+#      http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Extract prebuilt libraries (from a CM7 running device) needed for the U8150
+# Extract prebuilt libraries (from a CM7 running device) needed for the C8500
 
 DEVICE=c8500
 
@@ -34,7 +34,7 @@ adb pull /system/bin/qmuxd ../../../vendor/huawei/$DEVICE/proprietary/bin/qmuxd
 adb pull /system/bin/rild ../../../vendor/huawei/$DEVICE/proprietary/bin/rild
 
 adb pull /system/etc/01_qc.cfg ../../../vendor/huawei/$DEVICE/proprietary/etc/01_qc.cfg
-adb pull /system/etc/AudioFilterU8150.csv ../../../vendor/huawei/$DEVICE/proprietary/etc/AudioFilterU8150.csv
+adb pull /system/etc/AudioFilterC8500.csv ../../../vendor/huawei/$DEVICE/proprietary/etc/AudioFilterC8500.csv
 adb pull /system/etc/init.qcom.bt.sh ../../../vendor/huawei/$DEVICE/proprietary/etc/init.qcom.bt.sh
 adb pull /system/etc/pvplayer.cfg ../../../vendor/huawei/$DEVICE/proprietary/etc/pvplayer.cfg
 
@@ -72,7 +72,7 @@ adb pull /system/lib/libril-qcril-hook-oem.so ../../../vendor/huawei/$DEVICE/pro
 adb pull /system/lib/libwms.so ../../../vendor/huawei/$DEVICE/proprietary/lib/libwms.so
 adb pull /system/lib/libwmsts.so ../../../vendor/huawei/$DEVICE/proprietary/lib/libwmsts.so
 
-chmod 755 ../../../vendor/huawei/u8150/proprietary/bin/* 
+chmod 755 ../../../vendor/huawei/c8500/proprietary/bin/* 
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/huawei/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The AndroidOpen Source Project
@@ -100,7 +100,7 @@ PRODUCT_COPY_FILES += \\
 
 PRODUCT_COPY_FILES += \\
     vendor/huawei/__DEVICE__/proprietary/etc/01_qc.cfg:system/etc/01_qc.cfg \\
-    vendor/huawei/__DEVICE__/proprietary/etc/AudioFilterU8150.csv:system/etc/AudioFilterU8150.csv \\
+    vendor/huawei/__DEVICE__/proprietary/etc/AudioFilterC8500.csv:system/etc/AudioFilterC8500.csv \\
     vendor/huawei/__DEVICE__/proprietary/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \\
     vendor/huawei/__DEVICE__/proprietary/etc/pvplayer.cfg:system/etc/pvplayer.cfg
 
